@@ -1,5 +1,5 @@
 import ButtonPage from "./pages/ButtonPage";
-import Accordion from "./cmoponents/Accordion";
+import Accordion from "./components/Accordion";
 
 function App() {
   const items = [

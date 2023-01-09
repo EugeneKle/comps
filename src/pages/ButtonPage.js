@@ -1,5 +1,5 @@
 import { GoBell, GoCloudUpload, GoDatabase } from "react-icons/go";
-import Button from "../cmoponents/Button";
+import Button from "../components/Button";
 
 function ButtonPage() {
   return (
