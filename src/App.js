@@ -1,30 +1,23 @@
-import ButtonPage from "./pages/ButtonPage";
-import Accordion from "./components/Accordion";
+import { useState } from "react";
+import Dropdown from "./components/Dropdown";
 
 function App() {
-  const items = [
-    {
-      id: "sasd",
-      label: "Can I use React on a project",
-      content:
-        "You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.",
-    },
-    {
-      id: "safdv",
-      label: "Can I use JavaScript on a project",
-      content:
-        "You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.",
-    },
-    {
-      id: "amaks",
-      label: "Can I Use React on a project",
-      content:
-        "You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.",
-    },
+  const [selection, setSelection] = useState({});
+
+  const handleSelect = (option) => {
+    setSelection(option);
+  };
+
+  const options = [
+    { label: "Red", value: "red" },
+    { label: "Yellow", value: "yellow" },
+    { label: "Green", value: "green" },
+    { label: "Orange", value: "orange" },
   ];
+
   return (
-    <div>
-      <Accordion items={items} />
+    <div className="flex">
+      <Dropdown options={options} value={selection} onChange={handleSelect} />
     </div>
   );
 }
