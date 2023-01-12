@@ -3,10 +3,9 @@ import Button from "../components/Button";
 
 function ButtonPage() {
   return (
-    <div>
+    <div className="flex flex-col items-center gap-2">
       <div>
-        <Button secondary outline rounded className={"mb-5"}>
-          <GoBell />
+        <Button secondary outline rounded>
           Click me!
         </Button>
       </div>
@@ -24,6 +23,7 @@ function ButtonPage() {
       </div>
       <div>
         <Button primary outline>
+          <GoBell />
           Follow me
         </Button>
       </div>
